@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>calculator</title>
+</head>
+<body>
+    <h1>Perform Simple Calculations</h1>
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="mult"></p>
+    <p id="div"></p>
+    <script type="text/javascript">
+        const num1 = 40
+        const num2 = 10;
+        let add =  num1 + num2
+        let sub = num1 - num2
+        let mult = num1 * num2
+        let div = num1 / num2
+        document.getElementById("add").innerHTML ="The Added Value is equal to " + add
+        document.getElementById("sub").innerHTML ="The Subtracted Value is equal to " + sub
+        document.getElementById("mult").innerHTML ="The Multiplied Value is equal to " + mult
+        document.getElementById("div").innerHTML ="The Divided Value is equal to " + div
+    </script>
+</body>
+</html>
