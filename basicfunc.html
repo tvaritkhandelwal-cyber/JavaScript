@@ -1,0 +1,50 @@
+<!-- Activity 1-Create basic Function in JS -->
+<!DOCTYPE html>
+<head>
+    <title>Baic Function</title>
+</head>
+<body>
+    <h1>Functions</h1>
+    <p>Basic Functions</p>
+    <button onclick="greet()">Run Function</button>
+    <p id="message"></p>
+    <script>
+        function greet(){
+            document.getElementById("message").innerHTML = "This is the function greet() greeting"
+        }
+    </script>
+</body>
+</html>
+<hr>
+<!-- Activity 2-Scope of Variables in Functions -->
+<!DOCTYPE html>
+<body>
+    <p>Functions can acsess variables declared in functions</p>
+    <button onclick="mult()">Click Me!</button>
+    <p id="multP"></p>
+    <p id="aP"></p>
+    <p id="bP"></p>
+    <script>
+        let a = 5
+        function mult(){
+            let b = 10
+            document.getElementById("multP").innerHTML = a*b
+        }
+        document.getElementById("aP").innerHTML = a
+        document.getElementById("bP").innerHTML = b 
+    </script>
+</body>
+</html>
+<hr>
+<!DOCTYPE html>
+<body>
+    <p>This button runs an expression function</p>
+    <button onclick="func()">Run Expression Function</button>
+    <p id="messagefunc"></p>
+    <script>
+        let func = function(){
+            document.getElementById("messagefunc").innerHTML = "This was printed by a expression function"
+        }
+    </script>
+</body>
+</html>
