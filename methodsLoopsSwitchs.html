@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <title>Methods, Loops and Switches</title>
+</head>
+<body>
+    <h1>Methods, Loops and Switches</h1>
+    <!-- Activity-1 -->
+    <h2>String Methods</h2>
+    <button onclick="printString()">Print</button>
+    <p id="uc"></p>
+    <p id="lc"></p>
+    <p id="sw"></p>
+    <p id="rx"></p>
+    <!-- Activity-2 -->
+    <h2>Loops</h2>
+    <p id="fruits"></p>
+    <button onclick="printLoop()">Print</button>
+    <!-- Activity-3 -->
+    <h2>Switch</h2>
+    <p id="day"></p>
+    <button onclick="printDay()">Print</button>
+    <script>
+        //Activity-1
+        function printString(){
+            let str = "JavaScript is a nice Language"
+            document.getElementById("uc").innerHTML = str.toUpperCase()
+            document.getElementById("lc").innerHTML = str.toLowerCase()
+            document.getElementById("sw").innerHTML = str.startsWith("JavaScript")
+            let regex = new RegExp("JavaScript")
+            document.getElementById("rx").innerHTML = regex.test(str)
+        }
+        // Activity-2
+        function printLoop(){
+            let fruits = ["watermelon","banana","apple","grapes","mango"]
+            let text = ""
+            for(let i = 0; i<fruits.length; i++){
+                text += fruits[i] + "<br>"
+            }
+            document.getElementById("fruits").innerHTML = text
+        }
+        // Activity-3
+        function printDay(){
+            let currentDayNum = new Date().getDay()
+            let day = ""
+            switch(currentDayNum){
+                case 0:
+                    day = "Sunday"
+                    break;
+                case 1:
+                    day = "Monday"
+                    break;
+                case 2:
+                    day = "Tuesday"
+                    break;
+                case 3:
+                    day = "Wednesday"
+                    break;
+                case 4:
+                    day = "Thursday"
+                    break;
+                case 5:
+                    day = "Friday"
+                    break;
+                case 6:
+                    day = "Saturday"
+                    break;
+                default:
+                    day ="impossible"
+                    break;
+            }
+            document.getElementById("day").innerHTML = day
+        }  
+    </script>
+</body>
+</html>
