@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <hr>
+    <hr>
+
+    <!-- Activity-1 Arrays -->
+    <p id="act1-arrs"></p>
+    <hr>
+    <!-- Activity-2 Array Methods -->
+    <p id="join"></p>
+    <p id="prepop"></p>
+    <p id="postpop"></p>
+    <hr>
+    <!-- Activity-3 -->
+    <p id="callstack"></p>
+
+    <script>
+        // activity-1
+        let arr = ["me",13,true]
+        document.getElementById("act1-arrs").innerHTML = "["+arr+"]"
+        // activity-2
+        let arr2 = [1,2,3,4,5,6]
+        document.getElementById("join").innerHTML = arr2.join(" + ")
+        document.getElementById("prepop").innerHTML = arr2
+        arr2.pop()
+        document.getElementById("postpop").innerHTML = arr2
+        // activity-3
+        function add(a,b){
+            return a+b;
+        }
+        function average(a,b){
+            let x = add(a,b)
+            return x/2
+        }
+        let y = average(10,20)
+        document.getElementById("callstack").innerHTML = y
+    </script>
+</body>
+</html>
