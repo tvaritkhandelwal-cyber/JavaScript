@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <title>My Zoo</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: linen;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            font-size: 40px;
+            color: coral;
+        }
+        .blank{
+            padding: 5px;
+            border: 2px solid lightgray;
+            margin: 5px;
+            border-radius: 20px;
+            width: 50%;
+            margin-left: 25%;
+        }
+        #box{
+            text-align: center;
+            background-color:blanchedalmond;
+            width: 70%;
+            margin-left: 14%;
+            border: darkgray 2px solid;
+            padding: 4px;
+            border-radius: 30px;
+        }
+        #button{
+            margin: 10px;
+            background-color: darksalmon;
+            border: 1px solid grey;
+            border-radius: 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Zoo</h1>
+    <div id="box">
+        <div class="blank" id="animalOne"></div>
+        <div class="blank" id="animalTwo"></div>
+        <div class="blank" id="animalThree"></div>
+        <div class="blank" id="total"></div>
+    </div>
+    <button id="button" onclick="openZoo()">Open Zoo</button>
+    <div id="msg"></div>
+
+    <script>
+        function openZoo(){
+            document.getElementById("box").style.backgroundColor = "green"
+
+            document.getElementById("animalOne").textContent = "Elephant"
+            document.getElementById("animalOne").style.backgroundColor = "lightgreen"
+            document.getElementById("animalOne").style.borderColor = "white"
+
+            document.getElementById("animalTwo").textContent = "Whale"
+            document.getElementById("animalTwo").style.backgroundColor = "lightgreen"
+            document.getElementById("animalTwo").style.borderColor = "white"
+
+            document.getElementById("animalThree").textContent = "Giraffe"
+            document.getElementById("animalThree").style.backgroundColor = "lightgreen"
+            document.getElementById("animalThree").style.borderColor = "white"
+
+            document.getElementById("total").textContent = 3
+            document.getElementById("total").style.backgroundColor = "lightgreen"
+            document.getElementById("total").style.borderColor = "white"
+
+            document.getElementById("msg").textContent = "Zoo Opened!"
+        }
+    </script>
+</body>
+</html>
