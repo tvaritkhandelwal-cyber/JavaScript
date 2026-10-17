@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <title>My Game Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aliceblue;
+            text-align: center;
+            padding: 30px;
+        }
+        h1{
+            color: navy;
+        }
+        div{
+            border: 1px solid navy;
+            width: 280px;
+            margin: 6px auto;
+            padding: 8px 12px;
+            text-align: left;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Game Profile</h1>
+    <button class="btn btn-primary" onclick="showProfile()">Show Profile</button>
+    <div>Name: <span id="name"></span></div>
+    <div>Score: <span id="score"></span></div>
+    <div>Top Score: <span id="top"></span></div>
+    <div>Rank: <span id="rank"></span></div>
+    <div>Stars: <span id="star"></span></div>
+    <div>Bonus Level: <span id="null"></span></div>
+    <div>Team Name: <span id="undefined"></span></div>
+    <div>Good <span id="greet"></span></div>
+
+    <script>
+        function showProfile(){
+            let topScore = Math.abs(Math.floor((Math.random()*50)+50))
+            let score = Math.floor(Math.random()*80)
+            let name = "Bob"
+            let rank = ""
+            let bonus = null
+            let team;
+            if(topScore >= 90){
+                rank = "Gold"
+            }else if(topScore >= 80){
+                rank = "Silver"
+            }else if(topScore >= 70){
+                rank = "Bronze"
+            }else{
+                rank = "Unranked"
+            }
+            let datehrs = new Date().getHours()
+            let greeting = ""
+            if(datehrs < 12){
+                greeting = "Morning"
+            }else if(datehrs < 15){
+                greeting = "Afternoon"
+            }else if(datehrs < 20){
+                greeting = "Evening"
+            }else{
+                greeting = "Night"
+            }
+            let stars = ""
+            let count = score % 5
+            while(count <= 5){
+                stars += "⭐️"
+                count ++
+            }
+            document.getElementById("name").textContent = name
+            document.getElementById("score").textContent = score
+            document.getElementById("top").textContent = topScore
+            document.getElementById("rank").textContent = rank
+            document.getElementById("greet").textContent = greeting
+            document.getElementById("star").textContent = stars
+            document.getElementById("null").textContent = bonus
+            document.getElementById("undefined").textContent = team
+
+        }
+    </script>
+</body>
+</html>
