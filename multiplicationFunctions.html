@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>Multiplication Functions</title>
+</head>
+<body>
+    <button onclick="multiply(4)">Click Me</button>
+    <p id="result"></p>
+
+    <script>
+        function multiply(x,y){
+            if(y === undefined){
+                alert("The Second Value is undefined")
+                y = 5
+            }
+            document.getElementById("result").textContent = x * y
+        }
+    </script>
+</body>
+</html>
