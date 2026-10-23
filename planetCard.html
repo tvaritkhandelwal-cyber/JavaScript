@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>My Planet Card</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body{
+            margin: 5px;
+            text-align: center;
+            background-color: linen;
+        }
+        #button{
+            font-size: 20px;
+        }
+        .card{
+            margin: 5px;
+            background-color: darkblue;
+            color: white;
+        }
+        .card-title{
+            color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Planet Card</h1>
+    <p>This webpage uses classes to automatically create 3 planet cards</p>
+    <button class="btn btn-primary" id="button" onclick="showPlanets()">Show Planets</button>
+    <div id="card1"></div>
+    <div id="card2"></div>
+    <div id="card3"></div>
+    <script>
+        function showPlanets(){
+            class Planet{
+                constructor(name,fact){
+                    this.name = name
+                    this.fact = fact
+                }
+                describe(){
+                    return this.name + ": " +  this.fact
+                }
+            }
+            let p1 = new Planet("Earth", "Our home planet")
+            let p2 = new Planet("Mars","Known as the red planet")
+            let p3 = new Planet("Jupiter", "It has the most moons")
+            document.getElementById("card1").innerHTML = `<div class="card m-2 border border-white">
+                <div class="card-body">
+                    <h5 class="card-title"> ${p1.name} </h5>
+                    <p class="card-text"> ${p1.fact}</p>
+                </div>
+            </div>`
+            document.getElementById("card2").innerHTML = `<div class="card m-2 border border-white">
+                <div class="card-body">
+                    <h5 class="card-title"> ${p2.name} </h5>
+                    <p class="card-text"> ${p2.fact}</p>
+                </div>
+            </div>`
+            document.getElementById("card3").innerHTML = `<div class="card m-2 border border-dark">
+                <div class="card-body">
+                    <h5 class="card-title"> ${p3.name} </h5>
+                    <p class="card-text"> ${p3.fact}</p>
+                </div>
+            </div>`
+        }
+    </script>
+</body>
+</html>
