@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>My Profile Page</title>
+    </head>
+    <body>
+        <h2>My Profile and Favourite Colours</h2>
+        <p id="profile"></p>
+        <p id="pet"></p>
+        <p id="favcolor"></p>
+        <p id="before"></p>
+        <p id="after"></p>
+        <script>
+            let me = {
+                name:"Tvarit",
+                grade:8,
+                age:13,
+                hobby:"coding"
+            }
+            let favcolors=["white","blue","red","green","black"]
+            document.getElementById("profile").textContent = `Name: ${me.name} | Age: ${me.age}`
+            document.getElementById("pet").textContent = me.pet
+            document.getElementById("favcolor").textContent = `My Favourite Color is ${favcolors[1]}`
+            document.getElementById("before").textContent = `Before Pop: ${favcolors.join(" * ")}`
+            favcolors.pop()
+            document.getElementById("after").textContent = `After Pop: ${favcolors.join(" * ")}`     
+        </script>
+    </body>
+</html>
